@@ -10,10 +10,11 @@ void setup () {
   locY = sz;
   velX = 2;
   velY = 0;
-  aclY = .001;
-  gravity = .01;
+  aclY = .1;
+  gravity = .1;
 }
 void draw () {
+  background (0);
   velX += aclX;
   velY += gravity;
 
@@ -23,14 +24,14 @@ void draw () {
   ellipse (locX, locY, sz, sz);
   if (locY + sz/2> height) {
     locY = height - sz/2;
-    velY*=-.75;
-    velX *= .99;
+    velY*=-.9;
+    velX *= .9;
   }
   if( locX + sz/2 > width) {
-    velX =-abs(velX) * .9;
+    velX =-abs(velX) * .8;
   }
   if (locX - sz/2 < 0) {
-    velX = abs(velX) * .9;
+    velX = abs(velX) * .4;
   }
 }
 
