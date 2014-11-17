@@ -11,7 +11,7 @@ void setup () {
   velX = 0;
   velY = 0;
   aclY = .001;
-  gravity = .005;
+  gravity = .01;
 }
 void draw () {
   velX += aclX;
@@ -21,8 +21,8 @@ void draw () {
   locY += velY;
 
   ellipse (locX, locY, sz, sz);
-  if (locY + sz/2> height) {
-
+  if (locY> height) {
+    locY = height;
     velY*=-1;
   }
 }
