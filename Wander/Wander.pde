@@ -4,6 +4,7 @@ float accx, accy;
 float sz = 20;
 
 void setup () {
+  colorMode (HSB,360,100,100,100);
  size (600,600);
 locx = width/2;
 locy = height/2;
@@ -13,6 +14,7 @@ accx = 0;
 accy = 0;
 }
 void draw () {
+  fill(frameCount%360,100,100);
   accx = random (-.2, .2);
   accy = random (-.2,.2);
   
