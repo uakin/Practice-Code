@@ -33,3 +33,17 @@ if(loc.y + sz/2 < 0) {
   loc.y = height + sz/2;
 }
 }
+//void keyPressed () {
+//  if (key == UP) {
+//    acc.y = .2;
+//  }
+//  if (key == DOWN) {
+//    acc. y = .2;
+//  }
+//  if (key == RIGHT) {
+//    acc. x = -.2;
+//  }
+//  if (key == LEFT) {
+//    acc. x = .2;
+//  }
+//}
