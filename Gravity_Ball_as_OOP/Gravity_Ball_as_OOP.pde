@@ -21,7 +21,7 @@ class GravityBall {
 
   GravityBall () {
     sz = 50;
-    loc = new PVector (random(sz/2,width-sz/2), random (50,200));
+    loc = new PVector (random(sz/2,width-sz/2), random (10,200));
     vel = new PVector (0, 0);
     acc = new PVector (0, .1);
   }
@@ -34,7 +34,7 @@ class GravityBall {
   }
   void bounce () {
     if (loc.y + sz/2 > height) {
-      vel.y = -abs(vel.y);
+      vel.y *= -.9;
       loc.y = height - sz/2;
     }
   }
