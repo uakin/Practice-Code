@@ -1,13 +1,20 @@
-Ball [] b = new Ball [100]; //declare a neww obect of the ball class
+     float hue = 0;
+Ball [] b = new Ball [20]; //declare a neww obect of the ball class
 
 void setup() {
   size (800, 600);
+  colorMode (HSB, 360,100,100,100);
+
   for (int i = 0; i < b. length; i++) {
-    b[i] = new Ball ();
+    b[i] = new Ball (random (2,80));
   }
 }
 void draw () {
-  background (0); 
+  background (0);
+
+    hue++; 
+    fill (hue%360,100,100);
+
   for (int i = 0; i < b. length; i++) {
     b[i].move();
     b[i].bounce();
@@ -24,15 +31,15 @@ class Ball {
   float sz;
   PVector loc, vel; 
   //imntialized properties
-  Ball () {
-    sz = 50;
+  Ball (float tempsz) {
+    sz = tempsz;
     loc = new PVector (width/2, height/2);
     vel = PVector. random2D ();
   }
 
   void display() {
     ellipse (loc.x, loc.y, sz, sz);
-  }
+ }
 
   void move() {
     loc. add (vel);
