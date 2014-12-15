@@ -20,5 +20,8 @@ else{
   return false;
 }
 }
+void grow() {
+  sz+=1;
+}
 }
 

@@ -25,6 +25,7 @@ void draw () {
 //        
             if (eating.consume(balls)){
 b.remove(i);
+eating. grow();
             }
       }
     }
