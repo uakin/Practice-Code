@@ -9,9 +9,9 @@ void setup () {
 }
 void draw () {
   background (0);
-  eating. display();
   hue++;
   fill (hue%360, 100, 100, 60);
+  eating. display();
 
   for (int i = 0; i< b.size (); i++) {
     Ball balls = b . get (i);
