@@ -1,4 +1,4 @@
-int count = 150;
+int count = 300;
 PVector[] loc = new PVector [count];
 PVector [] vel = new PVector [count];
 PVector [] acc = new PVector [count];
