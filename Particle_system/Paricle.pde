@@ -10,14 +10,14 @@ float brit;
   float decay;
   Particles() {
     //intiallize varibles
-    loc = new PVector (random(0,width), random(0,height));
-//    vel = new PVector (random(-1, 1), random(0, 1));
-//    acc = new PVector (random(0, .15), random(0, .15));
+    loc = new PVector (width/2,height/2);
+    vel = new PVector (random(-1, 1), random(-1, 1));
+    acc = new PVector (random(-.1, .15), random(-.2, .15));
     sz = random(10,50);
     life = 255;
-    decay= 2.5;
-    hue = 54;
-    sat = random (80,100);
+    decay= 1.5;
+    hue = 55;
+    sat = random (85,100);
     brit = random (80,100);
 
   }
@@ -37,7 +37,7 @@ float brit;
     fill(hue,sat,brit,life);
   }
   boolean begone () {
-    if ( loc.y - sz/2> height) {
+    if ( loc.y - sz/2> height||loc.y+sz/2<0) {
       return true;
     } else {
       return false;
