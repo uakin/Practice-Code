@@ -33,9 +33,10 @@ void draw () {
     if (p2.begone ()) {
       ps.remove(i);
     }
-    //Make the tree grow
+    //Make the tree grow and consume balls
     if (eating.consume(p2)) {
       ps.remove(i);
+// Make the tree stop growing when sz <190
       eating.grow();
     }
   }

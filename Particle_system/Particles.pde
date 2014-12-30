@@ -17,8 +17,9 @@ float brit;
     life = 255;
     decay= 1.5;
     hue = 55;
-//change the satuturation of the yellow
+//randomize the satuturation of the yellow
     sat = random (85,100);
+    //randomize the brightness of the yellow
     brit = random (80,100);
 
   }
