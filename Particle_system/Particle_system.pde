@@ -1,5 +1,6 @@
 //ArrayList with Particles (Intialize and Declare)
 ArrayList <Particles> ps = new ArrayList <Particles>();
+ArrayList <Cloud> c = new ArrayList <Cloud>();
 //Insert Black Hole Class (Declare)
 BlackHole eating;
 //Declare Happy Sun and Meadow
@@ -19,6 +20,7 @@ void draw () {
   ps.add (new Particles());
   //make the black hole appear
   eating. display();
+  dapper.display();
   //For each particle...
   for (int i = ps.size () - 1; i > 0; i--) {
     //get the particles
@@ -42,6 +44,17 @@ void draw () {
     //Tree stops growing when the sz = 190
     if (eating.consume(p2)) {
       eating.grow();
+    }
+  }
+
+  for (int j = c.size ()-1; j > 0; j--) {
+    //get the particles
+    Cloud c2 = c.get (j);
+    c2. display;
+    if (i!= j) {
+      if (c2.cover(ps)) {
+        ps.remove (i);
+      }
     }
   }
   //Insert Image

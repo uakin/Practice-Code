@@ -16,7 +16,7 @@ class BlackHole {
   }
   //Make the black hole (tree) recoginze the particles
   boolean consume (Particles food) {
-    if (loc. dist(food. loc) < (sz/2 + (food. sz/5))) {
+    if (loc. dist(food. loc) < (sz/2 + (food. sz/2))) {
       return true;
     }
     else {
