@@ -2,7 +2,7 @@
 ArrayList <Particles> ps = new ArrayList <Particles>();
 //Insert Black Hole Class (Declare)
 BlackHole eating;
-//Upload Happy Sun and Meadow
+//Declare Happy Sun and Meadow
 PImage img;
 PImage img2;
 void setup () {
@@ -36,7 +36,8 @@ void draw () {
     if (p2.begonex()) {
       ps.remove(i);
     }
-    //Make the tree grow when the particles hit it
+    //Make the tree grow when the particles hit it 
+    //Tree stops growing when the sz = 190
     if (eating.consume(p2)) {
       eating.grow();
     }
