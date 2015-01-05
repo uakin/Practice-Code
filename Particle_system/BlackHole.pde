@@ -27,7 +27,7 @@ class BlackHole {
   void grow() {
     //make it stop growing at a certian size
     if (sz <190) {
-      sz+=.5;
+      sz+=.05;
     }
   }
 }

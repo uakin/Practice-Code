@@ -1,21 +1,21 @@
-//ArrayList with Particles
+//ArrayList with Particles (Intialize and Declare)
 ArrayList <Particles> ps = new ArrayList <Particles>();
-//Insert Black Hole Class
+//Insert Black Hole Class (Declare)
 BlackHole eating;
-//Upload Image
+//Upload Happy Sun and Meadow
 PImage img;
+PImage img2;
 void setup () {
   size (500, 500);
-  //Load Image
+  //Load Happy Sun and Meadow
   img = loadImage("Happy Sun.png");
-  //Give eating a value
+  img2 = loadImage("Meadow.jpg");
+  //Give eating a value (Intialize)
   eating = new BlackHole();
-  //  colorMode (HSB, 360, 100, 100, 100);
-  //  noStroke();
 }
 
 void draw () {
-  background (#1CC0FF);
+  background (img2);
   ps.add (new Particles());
   //make the black hole appear
   eating. display();
@@ -33,13 +33,13 @@ void draw () {
     if (p2.begone ()) {
       ps.remove(i);
     }
-    //Make the tree grow and consume balls
-    if (eating.consume(p2)) {
+    if (p2.begonex()) {
       ps.remove(i);
-// Make the tree stop growing when sz <190
+    }
+    //Make the tree grow when the particles hit it
+    if (eating.consume(p2)) {
       eating.grow();
     }
-    else 
   }
   //Insert Image
   image (img, 0, 0, 200, 200);
