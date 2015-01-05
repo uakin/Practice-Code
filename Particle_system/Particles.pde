@@ -48,7 +48,7 @@ class Particles {
     }
   }
   boolean begonex () {
-    //tell if the balls are off the screen in the s direction
+    //tell if the balls are off the screen in the x direction
     if (loc.x>width){
       return true;
     }else {

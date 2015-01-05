@@ -14,7 +14,7 @@ class BlackHole {
   void display () {
     image (tr, loc.x, loc.y, sz, sz);
   }
-  //Make the black hole (tree) consume the particles
+  //Make the black hole (tree) recoginze the particles
   boolean consume (Particles food) {
     if (loc. dist(food. loc) < (sz/2 + (food. sz/5))) {
       return true;

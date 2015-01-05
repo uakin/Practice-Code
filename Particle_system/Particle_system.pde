@@ -21,7 +21,7 @@ void draw () {
   eating. display();
   for (int i = ps.size () - 1; i > 0; i--) {
     Particles p2 = ps. get (i);
-  //Make Particles Appear
+    //Make Particles Appear
     p2. display();
     //Give Particles the Yellow, Happiness color
     p2.fills();
