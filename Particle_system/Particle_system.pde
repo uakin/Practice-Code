@@ -22,7 +22,7 @@ void setup () {
 
 void draw () {
   background (img2);
-//add particle to the system
+  //add particle to the system
   ps.add (new Particles());
   //make the black hole appear
   eating. display();
@@ -51,22 +51,22 @@ void draw () {
     if (eating.consume(p2)) {
       eating.grow();
     }
-/*
+    /*
        //For each Cloud Particle...
-       c.add (new Cloud(mouseX, mouseY));
-      for (int j = c.size ()-1; j > 0; j--) {
-        //get the cloud particles
-        Cloud c2 = c.get (j);
-       //display the cloud particle
-        c2.display();
-      //when the cloud covers the location of the particles' orgion, make the particles disappear
-      if (i!= j) {
-         if (c2.cover(origin) && ps.size() > 1) {
-         ps.remove (i);
-      }
-        }
-       }
-       */
+     c.add (new Cloud(mouseX, mouseY));
+     for (int j = c.size ()-1; j > 0; j--) {
+     //get the cloud particles
+     Cloud c2 = c.get (j);
+     //display the cloud particle
+     c2.display();
+     //when the cloud covers the location of the particles' orgion, make the particles disappear
+     if (i!= j) {
+     if (c2.cover(origin) && ps.size() > 1) {
+     ps.remove (i);
+     }
+     }
+     }
+     */
   }
   //Insert Image
   image (img, 0, 0, 200, 200);
