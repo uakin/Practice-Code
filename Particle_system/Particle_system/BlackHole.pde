@@ -9,7 +9,7 @@ class BlackHole {
     loc = new PVector (width/1.6, height/1.6);
     sz = 50;
   }
-//define the meathods
+  //define the meathods
 //Make the Tree Display
   void display () {
     image (tr, loc.x, loc.y, sz, sz);

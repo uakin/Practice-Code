@@ -19,9 +19,7 @@ void draw () {
   ps.add (new Particles());
   //make the black hole appear
   eating. display();
-  //For each particle...
   for (int i = ps.size () - 1; i > 0; i--) {
-    //get the particles
     Particles p2 = ps. get (i);
     //Make Particles Appear
     p2. display();

@@ -49,15 +49,14 @@ class Particles {
   }
   boolean begonex () {
     //tell if the balls are off the screen in the x direction
-    if (loc.x>width) {
+    if (loc.x>width){
       return true;
-    } else {
+    }else {
       return false;
     }
   }
-  //make opacity decrease
-  void update() {
-    life-=decay;
-  }
+//make opacity decrease
+void update() {
+  life-=decay;
 }
-
+}
