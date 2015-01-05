@@ -6,7 +6,7 @@ class Cloud {
   //intailized properties
   Cloud () {
     cl = loadImage("Happy Cloud.png");
-    loc = new PVector (80, 60);
+    loc = new PVector (mouseX, mouseY);
     sz = 200;
   }
   //define the meathods
@@ -15,8 +15,8 @@ class Cloud {
     image (cl, loc.x, loc.y, sz, sz);
   }
 //make the cloud make the particles stop
-  boolean cover (Particles goAway) {
-    if (loc == goAway.loc) {
+  boolean cover (PVector o) {
+    if (loc.dist(o) < sz/2) {
       return true;
     } else {
       return false;

@@ -10,7 +10,7 @@ class Particles {
   float decay;
   Particles() {
     //intiallize varibles
-    loc = new PVector (80, 60);
+    loc = origin.get();
     vel = new PVector (random(0, 1), random(0, 1));
     acc = new PVector (random(0, .15), random(0, .15));
     sz = random(10, 50);

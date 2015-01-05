@@ -1,3 +1,4 @@
+PVector origin;
 //ArrayList with Particles (Intialize and Declare)
 ArrayList <Particles> ps = new ArrayList <Particles>();
 ArrayList <Cloud> c = new ArrayList <Cloud>();
@@ -8,6 +9,7 @@ PImage img;
 PImage img2;
 void setup () {
   size (500, 500);
+  origin = new PVector(80,60);
   //Load Happy Sun and Meadow
   img = loadImage("Happy Sun.png");
   img2 = loadImage("Meadow.jpg");
@@ -20,7 +22,6 @@ void draw () {
   ps.add (new Particles());
   //make the black hole appear
   eating. display();
-  dapper.display();
   //For each particle...
   for (int i = ps.size () - 1; i > 0; i--) {
     //get the particles
@@ -45,17 +46,19 @@ void draw () {
     if (eating.consume(p2)) {
       eating.grow();
     }
-  }
-//For each Cloud Particle...
-  for (int j = c.size ()-1; j > 0; j--) {
-    //get the cloud particles
-    Cloud c2 = c.get (j);
-    //display the cloud particle
-    c2. display;
-    //when the cloud covers the location of the particles' orgion, make the particles disappear
-    if (i!= j) {
-      if (c2.cover(ps)) {
-        ps.remove (i);
+
+    //For each Cloud Particle...
+    c.add (new Cloud());
+    for (int j = c.size ()-1; j > 0; j--) {
+      //get the cloud particles
+      Cloud c2 = c.get (j);
+      //display the cloud particle
+      c2.display();
+      //when the cloud covers the location of the particles' orgion, make the particles disappear
+      if (i!= j) {
+        if (c2.cover(origin) && ps.size() > 1) {
+          ps.remove (i);
+        }
       }
     }
   }
