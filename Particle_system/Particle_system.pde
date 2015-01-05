@@ -46,11 +46,13 @@ void draw () {
       eating.grow();
     }
   }
-
+//For each Cloud Particle...
   for (int j = c.size ()-1; j > 0; j--) {
-    //get the particles
+    //get the cloud particles
     Cloud c2 = c.get (j);
+    //display the cloud particle
     c2. display;
+    //when the cloud covers the location of the particles' orgion, make the particles disappear
     if (i!= j) {
       if (c2.cover(ps)) {
         ps.remove (i);
