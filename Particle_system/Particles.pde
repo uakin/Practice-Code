@@ -3,10 +3,10 @@ class Particles {
   PVector loc, vel, acc;
   //declare size,hue,sat,life,brit,decay
   float sz;
- float hue;
-float life;
-float sat;
-float brit;
+  float hue;
+  float life;
+  float sat;
+  float brit;
   float decay;
   Particles() {
     //intiallize varibles

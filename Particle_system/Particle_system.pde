@@ -39,6 +39,7 @@ void draw () {
 // Make the tree stop growing when sz <190
       eating.grow();
     }
+    else 
   }
   //Insert Image
   image (img, 0, 0, 200, 200);
