@@ -4,7 +4,7 @@
 PVector origin;
 //ArrayList with Particles (Intialize and Declare)
 ArrayList <Particles> ps = new ArrayList <Particles>();
-//ArrayList <Cloud> c = new ArrayList <Cloud>();
+Cloud c;
 //Insert Black Hole Class (Declare)
 BlackHole eating;
 //Declare Happy Sun and Meadow
@@ -18,12 +18,15 @@ void setup () {
   img2 = loadImage("Meadow.jpg");
   //Give eating a value (Intialize)
   eating = new BlackHole();
+  c = new Cloud();
 }
 
 void draw () {
   background (img2);
   //add particle to the system
-  ps.add (new Particles());
+  if (!c.cover(origin)) {
+    ps.add (new Particles());
+  }
   //make the black hole appear
   eating. display();
   //For each particle...
@@ -43,32 +46,18 @@ void draw () {
     if (p2.begone ()) {
       ps.remove(i);
     }
-    if (p2.begonex()) {
-      ps.remove(i);
-    }
     //Make the tree grow when the particles hit it 
     //Tree stops growing when the sz = 190
     if (eating.consume(p2)) {
       eating.grow();
     }
-    /*
-       //For each Cloud Particle...
-     c.add (new Cloud(mouseX, mouseY));
-     for (int j = c.size ()-1; j > 0; j--) {
-     //get the cloud particles
-     Cloud c2 = c.get (j);
-     //display the cloud particle
-     c2.display();
-     //when the cloud covers the location of the particles' orgion, make the particles disappear
-     if (i!= j) {
-     if (c2.cover(origin) && ps.size() > 1) {
-     ps.remove (i);
-     }
-     }
-     }
-     */
+
   }
   //Insert Image
+  imageMode(CORNER);
   image (img, 0, 0, 200, 200);
+  imageMode(CENTER);
+      c. display ();
+      c.update();
 }
 
