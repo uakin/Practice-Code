@@ -23,7 +23,7 @@ class Cloud {
       return false;
     }
   }
-  
+  //make the cloud move 
   void update(){
    loc.set (mouseX, mouseY); 
   }

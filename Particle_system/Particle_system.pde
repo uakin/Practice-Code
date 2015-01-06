@@ -4,6 +4,7 @@
 PVector origin;
 //ArrayList with Particles (Intialize and Declare)
 ArrayList <Particles> ps = new ArrayList <Particles>();
+//Insert Cloud Class
 Cloud c;
 //Insert Black Hole Class (Declare)
 BlackHole eating;
@@ -23,7 +24,7 @@ void setup () {
 
 void draw () {
   background (img2);
-  //add particle to the system
+  //add particle to the system if the cloud does not cover it
   if (!c.cover(origin)) {
     ps.add (new Particles());
   }
@@ -53,11 +54,14 @@ void draw () {
     }
 
   }
-  //Insert Image
+  //Insert Image with CORNER (Happy Sun)
   imageMode(CORNER);
   image (img, 0, 0, 200, 200);
+  //Insert Image with CENTER
   imageMode(CENTER);
+  //Show the Cloud
       c. display ();
+      //Update the Cloud each frame.
       c.update();
 }
 
