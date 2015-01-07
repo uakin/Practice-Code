@@ -1,5 +1,3 @@
-//Anything referring to the Cloud class should be ignored
-//for grading, please
 //where the Pariticles will come from
 PVector origin;
 //ArrayList with Particles (Intialize and Declare)
